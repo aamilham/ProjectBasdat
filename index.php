@@ -31,7 +31,7 @@ session_start();
             if(!isset($_POST["hidden"])){
             $title = $_POST['title'];
             $note = $_POST['note'];
-            $user_id = $_POST['user_id'];
+            $user_id = $_SESSION['user_id'];
             $category_id = $_POST['category_id'];
 
             if($category_id == "NULL"){
@@ -65,7 +65,7 @@ session_start();
                     </div>
 
                     <!-- ini value isinya user id dari yang login, untuk masalah lebih lanjut langsung aja ke session di login -->
-                    <input type="hidden" name="user_id" value="8">
+                    <!-- <input type="hidden" name="user_id" value="8"> -->
 
                     <div class="mb-3">
                         <label for="note" class="form-label">Notes</label>
