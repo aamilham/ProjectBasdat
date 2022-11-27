@@ -31,7 +31,7 @@ session_start();
             if(!isset($_POST["hidden"])){
             $pertemuan = $_POST['pertemuan'];
             $link = $_POST['link'];
-            $user_id = $_POST['user_id'];
+            $user_id = $_SESSION['user_id'];
             $category_id = $_POST['category_id'];
 
             if($category_id == "NULL"){
