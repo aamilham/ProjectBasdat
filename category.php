@@ -28,7 +28,7 @@ session_start();
         if (isset($_POST['submit'])) {
             if(!isset($_POST["hidden"])){
             $category = $_POST['category'];
-            $user_id = $_POST['user_id'];
+            $user_id = $_SESSION['user_id'];
             $sql = "INSERT INTO `category` (`user_id`, `category`) VALUES ('$user_id', '$category')";
             $result = mysqli_query($conn, $sql);
             }
